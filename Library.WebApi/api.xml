@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Library.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Library.WebApi.Controllers.AuthorsController">
+            <summary>
+            ავტორის კონტროლერი, ავტორების სიის სამართავად
+            </summary>
+        </member>
+        <member name="M:Library.WebApi.Controllers.AuthorsController.#ctor(Library.WebApi.Repositories.IAuthorRepository)">
+            <summary>
+            ავტორების კონსტრუქტორი, რომელიც აინჯექთებს ავტორის რეპოზიტორის
+            </summary>
+            <param name="authorRepository">ავტორ რეპოზიტორი</param>
+        </member>
+        <member name="M:Library.WebApi.Controllers.AuthorsController.GetAuthors">
+            <summary>
+            გვაძლევს საშუალებას, წამოვიღოთ ავტორების სია
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.AuthorsController.GetAuthor(System.Int32)">
+            <summary>
+            გვაძლევს საშუალებას, წამოვიღოთ კონკრეტული ავტორი Id-ის მიხედვით
+            </summary>
+            <param name="id">იმ ავტორის Id, რომელსაც ვეძებთ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.AuthorsController.PutAuthor(System.Int32,Library.WebApi.Models.Author)">
+            <summary>
+            გვაძლევს საშუალებას, დავარედაქტიროთ კონკრეტული ავტორის ველები
+            </summary>
+            <param name="id">ავტორის Id</param>
+            <param name="author">ავტორი</param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.AuthorsController.PostAuthor(Library.WebApi.Models.Author)">
+            <summary>
+            გვაძლევს საშუალებას, დავამატოთ ახალი ავტორი
+            </summary>
+            <param name="author">ავტორი, რომელიც უნდა დავამატოთ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.AuthorsController.DeleteAuthor(System.Int32)">
+            <summary>
+            გვაძლევს საშუალებას, წავშალოთ კონკრეტული ავტორი მოცემული Id-ით
+            </summary>
+            <param name="id">იმ ავტორის Id, რომელსაც ვშლით</param>
+            <returns></returns>
+        </member>
+        <member name="T:Library.WebApi.Controllers.BookAuthorsController">
+            <summary>
+            კონტროლერი, რომელიც გამოიყენება წიგნსა და ავტორს შორის ურთიერთობის სამართავად
+            </summary>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BookAuthorsController.#ctor(Library.WebApi.Repositories.IBookAuthorRepository)">
+            <summary>
+            კონსტრუქტორი, რომელიც დააინჯექთებს წიგნების და ავტორის რეპოზიტორის
+            </summary>
+            <param name="bookAuthorRepository"></param>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BookAuthorsController.AddAuthorToBook(System.Int32,System.Int32)">
+            <summary>
+            გვაძლევს საშუალებას, დავუკავშიროთ ერთმანეთს წიგნი და ავტორი
+            </summary>
+            <param name="bookId">წიგნის Id</param>
+            <param name="authorId">ავტორის Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Library.WebApi.Controllers.BooksController">
+            <summary>
+            წიგნების კონტროლერი, რომელიც გამოიყენება წიგნების სიის სამართავად
+            </summary>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.#ctor(Library.WebApi.Repositories.IBookRepository)">
+            <summary>
+            კონსტრუქტორი, რომელიც აინჯექთებს წიგნების რეპოზიტორს
+            </summary>
+            <param name="bookRepository">წიგნების რეპოზიტორი</param>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.GetBooks">
+            <summary>
+            გვაძლევს საშუალებას, წამოვიღოთ წიგნების სია
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.GetBook(System.Int32)">
+            <summary>
+            გვაძლევს საშუალებას, წამოვიღოთ კონკრეტული წიგნი Id-ის მიხედვით
+            </summary>
+            <param name="id">იმ წიგნის Id, რომელსაც ვეძებთ </param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.PutBook(System.Int32,Library.WebApi.Models.Book)">
+            <summary>
+             გვაძლევს საშუალებას, დავარედაქტიროთ კონკრეტული წიგნის ველები
+            </summary>
+            <param name="id">წიგნის Id</param>
+            <param name="book">წიგნი</param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.PostBook(Library.WebApi.Models.Book)">
+            <summary>
+            გვაძლევს საშუალებას, დავამატოთ ახალი წიგნი
+            </summary>
+            <param name="book">წიგნი</param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.DeleteBook(System.Int32)">
+            <summary>
+            გვაძლევს საშუალებას, წავშალოთ კონკრეტული წიგნი მოცემული Id-ით
+            </summary>
+            <param name="id">იმ წიგნის Id, რომლის წაშლაც გვსურს</param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.CheckOutBook(System.Int32)">
+            <summary>
+            გვაძლევს საშუალებას, გავიტანოთ წიგნი
+            </summary>
+            <param name="id">იმ წიგნის Id, რომლის გატანაც გვსურს</param>
+            <returns></returns>
+        </member>
+        <member name="M:Library.WebApi.Controllers.BooksController.ReturnBook(System.Int32)">
+            <summary>
+            გვაძლევს საშუალებას, დავაბრუნოთ წიგნი
+            </summary>
+            <param name="id">იმ წიგნის Id, რომელსაც ვაბრუნებთ</param>
+            <returns></returns>
+        </member>
+        <member name="T:Library.WebApi.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:Library.WebApi.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Library.WebApi.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Library.WebApi.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Library.WebApi.Migrations.fixed">
+            <inheritdoc />
+        </member>
+        <member name="M:Library.WebApi.Migrations.fixed.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Library.WebApi.Migrations.fixed.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Library.WebApi.Migrations.fixed.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
