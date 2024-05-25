@@ -46,7 +46,6 @@ namespace Library.WebApi.Repositories
             {
                 throw new ArgumentNullException(nameof(book));
             }
-
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
         }
